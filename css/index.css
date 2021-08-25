@@ -1,0 +1,393 @@
+@import url('./common.css');
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    min-height: 70px;
+}
+header .wrapper {
+    background: 50px 50px / auto calc(100% - 70px) no-repeat url(../img/main/gnb_Bg.png);
+    position: relative;
+}
+header .wrapper:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+header .container {
+    max-width: 1720px;
+    width: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+header h1 {
+    position: absolute;
+    top: 12px;
+    left: 5%;
+}
+#gnb {
+    position: relative;
+    text-align: right;
+    right: 5%;
+}
+#gnb .depth-1 {
+    display: inline-block;
+    vertical-align: top;
+}
+#gnb .depth-1 > li {
+    float: left;
+    width: 170px;
+    line-height: 70px;
+    position: relative;
+}
+#gnb .depth-1 li a {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    line-height: 70px;
+    position: relative;
+    text-align: center;
+}
+#gnb .depth-2 {
+    display: none;
+    text-align: center;
+    height: 335px;
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+#gnb .depth-1 > li:hover > a {
+    background-color: #09f;
+}
+#gnb .depth-1:hover .depth-2 {
+    display: block;
+    transition: 1s;
+}
+#gnb .depth-2 li {
+    overflow: hidden;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+#gnb .depth-2 li a {
+    font-size: 15px;
+    line-height: 130%;
+    font-weight: 300;
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid transparent;
+}
+#gnb .depth-2:hover {
+    background-color: #9999;
+}
+#gnb .depth-2 a:hover {
+    color: #09f;
+}
+.gnbbg {
+    display: none;
+    width: 100%;
+    height: 410px;
+    overflow: hidden;
+    background: #fff url(../img/main/gnb_Bg.png) no-repeat left top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#main {
+    width: 100%;
+    position: relative;
+    background: url("../img/main/bg_main2.png") no-repeat center top;
+}
+#main1 {
+    width: 100%;
+    height: 915px;
+    position: relative;
+}
+#main1 .scroll {
+    display: block;
+    width: 50px;
+    height: 115px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+    cursor: pointer;
+    animation: scrollMv 1s infinite alternate;
+    -webkit-animation: scrollMv 1s infinite alternate;
+}
+#main1 .scroll a {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    color: #59b4d7;
+}
+#main1 .scroll a img {
+    display: block;
+    margin: 0 auto 7px;
+}
+#main1 .scroll:before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: #b7dcef;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -.5px;
+}
+#mainvisual {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.title {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 90px;
+    width: 50%;
+}
+.title > dl dt {
+    color: #333;
+    font-size: 26px;
+    line-height: 120%;
+}
+.title > dl dt span {
+    display: block;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 120%;
+}
+.title > dl dd {
+    margin-left: 0;
+    margin-top: 25px;
+    color: #666;
+    font-size: 16px;
+    line-height: 150%;
+}
+.title > dl dd em {
+    font-style: normal;
+    color: #01398b;
+    font-weight: 700;
+    font-size: 18px;
+}
+.title > dl dd span {
+    display: block;
+}
+.bn {
+    margin-top: 55px;
+    width: 440px;
+    overflow: hidden;
+}
+.bn li {
+    float: left;
+    width: 210px;
+    height: 140px;
+    background: #e8ebf7;
+    overflow: hidden;
+    margin: 0 10px 10px 0;
+    position: relative;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+.bn li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.bn li a:before {
+    content: "";
+    display: block;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 9;
+}
+.bn li a dl {
+    margin: 35px 0 0 20px;
+}
+.bn li a dt {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.bn li a dd {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 130%;
+    color: #666;
+}
+.bn li a img {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.bn li:nth-child(2) {
+    background: #e6f0fc;
+}
+.bn li:last-child {
+    background: #eaecf2;
+}
+#aside {
+    display: table;
+    position: fixed;
+    top: 0;
+    right: 2%;
+    z-index: 9998;
+    height: 100%;
+}
+#aside ul {
+    display: table-cell;
+    vertical-align: middle;
+}
+#aside li {
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+#aside li span {
+    opacity: 0;
+    display: block;
+    width: auto;
+    text-align: center;
+    min-width: 100px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    background: #0dbed5;
+    border-radius: 22px;
+    float: right;
+    margin: 0 25px 0 0;
+    padding: 0 10px;
+}
+#aisde li span:hover , #aside li:hover span{
+    opacity: 1;
+}
+#aside li i {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d3d3d3;
+    font-size: 0;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+#aside li i:hover , #aside li:hover i {
+    background: #0dbed5;
+}
+footer {
+    width: 100%;
+    overflow: hidden;
+    background: #f5f6fa;
+}
+.footer-service {
+    max-width: 1380px;
+    display: flex;
+    width: 100%;
+    margin: 90px auto;
+    justify-content: space-evenly;
+}
+.footer-service-consultation {
+    float: left;
+}
+.footer-service-consultation dl dt {
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 120%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.footer-service-consultation dl dd {
+    font-size: 32px;
+    line-height: 140%;
+    color: #333;
+    font-weight: 300;
+    letter-spacing: -4px;
+    margin-inline-start: auto;
+    margin-top: 20px;
+}
+.footer-service-consultation dl dd em {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    color: #0a4da7;
+}
+.footer-service-consultation dl dd span {
+    display: block;
+}
+.footer-service-consultation dl p {
+    margin-top: 35px;
+    color: #08b1c7;
+    font-family: "Montserrat";
+    font-size: 36px;
+    line-height: 120%;
+    font-weight: 500;
+}
+.footer-service-section h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #333;
+}
+.footer-service-section h3 span {
+    margin: 30px 0 0 15px;
+    display: inline-block;
+}
+.footer-service-section ul {
+    margin: -20px 0 0 102px;
+}
+.footer-service-section ul li {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 170%;
+}
+footer .scrolltop {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: block;
+    width: 50px;
+    color: #0dbed5;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+footer .scrolltop img {
+    vertical-align: middle;
+}
+.inner {
+    max-width: 1720px;
+    margin: auto;
+}
+.inner h2 {
+    float: left;
+    margin-top: 17px;
+}
+.inner p {
+    float: right;
+    line-height: 70px;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+}
